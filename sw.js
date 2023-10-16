@@ -1,5 +1,6 @@
 // sw.js
 self.addEventListener('install', function(event) {
+    console.log('in sw file, trying to install');
     event.waitUntil(
         caches.open('my-cache').then(function(cache) {
             return cache.addAll([
