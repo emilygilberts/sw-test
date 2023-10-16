@@ -1,13 +1,15 @@
 self.addEventListener('install', function(event) {
     console.log('IN SSSWWWWW');
-    event.waitUntil(
-        caches.open('my-cache').then(function(cache) {
-            return cache.addAll([
-                '/',
-                '/index.html',
-            ]);
-        })
-    );
+    event.waitUntil(self.skipWaiting()); // Activate worker immediately
+   
+    // event.waitUntil(
+    //     caches.open('my-cache').then(function(cache) {
+    //         return cache.addAll([
+    //             '/',
+    //             '/index.html',
+    //         ]);
+    //     })
+    // );
 });
 
 self.addEventListener('fetch', function(event) {
