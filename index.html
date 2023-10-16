@@ -12,9 +12,10 @@
 
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw/sw.js')
+            console.log(typeof sw.js);
+            navigator.serviceWorker.register('sw.js')
                 .then(function (registration) {
-                    console.log('AAAService Worker registered with scope:', registration.scope);
+                    console.log('88888Service Worker registered with scope:', registration.scope);
                 })
                 .catch(function (error) {
                     console.error('Service Worker registration failed:', error);

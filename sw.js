@@ -1,4 +1,3 @@
-// sw.js
 self.addEventListener('install', function(event) {
     console.log('IN SSSWWWWW');
     event.waitUntil(
@@ -19,3 +18,7 @@ self.addEventListener('fetch', function(event) {
         })
     );
 });
+
+self.addEventListener('activate', (event) => {
+    event.waitUntil(enableNavigationPreload());
+  });
