@@ -12,7 +12,6 @@
 
     <script>
         if ('serviceWorker' in navigator) {
-            console.log(typeof sw.js);
             navigator.serviceWorker.register('sw.js')
                 .then(function (registration) {
                     console.log('88888Service Worker registered with scope:', registration.scope);
