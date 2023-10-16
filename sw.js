@@ -12,6 +12,7 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
+    console.log('in sw file, trying to fetch');
     event.respondWith(
         caches.match(event.request).then(function(response) {
             return response || fetch(event.request);
